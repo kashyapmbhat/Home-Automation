@@ -20,7 +20,7 @@ import java.io.OutputStream;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
-    static final UUID mUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    static final UUID mUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //serial port UUID
     static final String lg = "msg";
     BluetoothSocket btSocket = null;
     BluetoothAdapter btAdapter = null;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 btAdapter = BluetoothAdapter.getDefaultAdapter();
-                tooth = btAdapter.getRemoteDevice("00:18:E4:35:BD:45");
+                tooth = btAdapter.getRemoteDevice("00:18:E4:35:BD:45"); //HC-05 bluetooth address
                 int n=0;
                 do {
                     try {
